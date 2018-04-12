@@ -12,37 +12,21 @@ require([
 
  //trailheads layer 
   var featureLayer = new FeatureLayer({
-    url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads/FeatureServer"
+    url: "https://services.arcgis.com/YseQBnl2jq0lrUV5/arcgis/rest/services/CityHealth/FeatureServer"
   });
 
   map.add(featureLayer);
 
     
-  //parks layer
-  
-   var featureLayer2 = new FeatureLayer({
-    url: "https://services.arcgis.com/YseQBnl2jq0lrUV5/arcgis/rest/services/Parks_and_Open_Space_dfh/FeatureServer"
-  });
-  
 
-  map.add(featureLayer2);
   
-  //trails layer
-  
-  var featureLayer3 = new FeatureLayer({
-    url: "https://services.arcgis.com/YseQBnl2jq0lrUV5/arcgis/rest/services/Trails_dfh/FeatureServer"
-  });
-  
-  
-
-  map.add(featureLayer3);
   
   var view = new MapView({
   container: "viewDiv",
   map: map,
  
     
-  center: [-118.55,34.05293],
+  center: [-104.99,39.7392],
   zoom: 9
   });
 });

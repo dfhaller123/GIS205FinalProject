@@ -1,5 +1,12 @@
 /* it is totally okay for this to be completely empty right now, add what you need */
 
+      html, body, #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    
 /*define floater*/
 #floater{
   position:absolute;
@@ -7,7 +14,7 @@
   top:5px;
   right:5px;
   color: red;
-  background-color:green;
+  background-color:midnightblue;
   font-family:"Bookman Old Style";
   text-align: center;
   font-size:36px;
