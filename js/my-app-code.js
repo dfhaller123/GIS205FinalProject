@@ -10,7 +10,7 @@ require([
     basemap: "topo-vector"
   });
 
- //trailheads layer 
+ //my hosted feature layer 
   var featureLayer = new FeatureLayer({
     url: "https://services.arcgis.com/YseQBnl2jq0lrUV5/arcgis/rest/services/CityHealth/FeatureServer"
   });
@@ -18,7 +18,12 @@ require([
   map.add(featureLayer);
 
     
+ //cdphe locations 
+  var featureLayer2 = new FeatureLayer({
+    url: "https://services3.arcgis.com/66aUo8zsujfVXRIT/arcgis/rest/services/CDPHE_Health_Facilities/FeatureServer/", opacity: .5
+  });
 
+  map.add(featureLayer2);
   
   
   var view = new MapView({
