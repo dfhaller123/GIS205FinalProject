@@ -1,16 +1,17 @@
 require([
   "esri/Map",
   "esri/views/MapView",
-  //*** ADD ***//
+  "esri/widgets/Legend",
   "esri/layers/FeatureLayer",
+      
   "dojo/domReady!"
-], function(Map, MapView, FeatureLayer) {
+], function(Map, MapView, Legend, FeatureLayer) {
 
   var map = new Map({
     basemap: "topo-vector"
   });
 
- //health total popup template
+//health total popup template
   var template = {
     title: "Neighborhood Health Total: {HealthTot}",
     content: "<p>As of 2016, <b>{HealthTot}%</b> of the population in this neighborhood has a chronic disease.</p>",
@@ -19,14 +20,16 @@ require([
     
  //health facility popup template
   var template2 = {
-    title: "Health Facility: {FAC_NAME}"
+    title: "Facility Name: {FAC_NAME}" +
+      "<li>{ADDRESS}</>"
     };  
     
  //my hosted feature layer 
   var featureLayer = new FeatureLayer({
     url: "https://services.arcgis.com/YseQBnl2jq0lrUV5/arcgis/rest/services/CityHealth/FeatureServer",
-    popupTemplate: template
-  });
+    popupTemplate: template,
+
+   });
 
   map.add(featureLayer);
 
@@ -43,9 +46,21 @@ require([
   var view = new MapView({
   container: "viewDiv",
   map: map,
- 
-    
   center: [-104.99,39.7392],
   zoom: 10
   });
+    
+//add legend here
+    
+    var legend = new Legend({
+      view: view,
+      layerInfos: [{
+        layer: featureLayer,
+        title: "Legend"
+      }]
+    });
+
+    view.ui.add(legend, "bottom-right");
+    
+    
 });
