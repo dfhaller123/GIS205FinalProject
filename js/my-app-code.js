@@ -21,7 +21,8 @@ require([
  //health facility popup template
   var template2 = {
     title: "Facility Name: {FAC_NAME}" +
-      "<li>{ADDRESS}</>"
+      "<li>{ADDRESS}, {CITY_STATE_ZIP}</>"
+      
     };  
     
  //my hosted feature layer 
