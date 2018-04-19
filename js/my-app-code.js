@@ -10,9 +10,19 @@ require([
     basemap: "topo-vector"
   });
 
+ //health total popup template
+  var template = {
+    title: "Neighborhood Health Total: {HealthTot}",
+    content: "<p>As of 2016, <b>{HealthTot}%</b> of the population in this neighborhood has a chronic disease.</p>",
+  };   
+    
+    
+    
+    
  //my hosted feature layer 
   var featureLayer = new FeatureLayer({
-    url: "https://services.arcgis.com/YseQBnl2jq0lrUV5/arcgis/rest/services/CityHealth/FeatureServer"
+    url: "https://services.arcgis.com/YseQBnl2jq0lrUV5/arcgis/rest/services/CityHealth/FeatureServer",
+    popupTemplate: template
   });
 
   map.add(featureLayer);
