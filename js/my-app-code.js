@@ -17,7 +17,10 @@ require([
   };   
     
     
-    
+ //health facility popup template
+  var template2 = {
+    title: "Health Facility: {FAC_NAME}"
+    };  
     
  //my hosted feature layer 
   var featureLayer = new FeatureLayer({
@@ -30,7 +33,8 @@ require([
     
  //cdphe locations 
   var featureLayer2 = new FeatureLayer({
-    url: "https://services3.arcgis.com/66aUo8zsujfVXRIT/arcgis/rest/services/CDPHE_Health_Facilities/FeatureServer/", opacity: .5
+    url: "https://services3.arcgis.com/66aUo8zsujfVXRIT/arcgis/rest/services/CDPHE_Health_Facilities/FeatureServer/", opacity: .5,
+    popupTemplate: template2
   });
 
   map.add(featureLayer2);
