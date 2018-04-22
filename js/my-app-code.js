@@ -57,11 +57,23 @@ require([
       view: view,
       layerInfos: [{
         layer: featureLayer,
-        title: "Legend"
+        title: "% Chronic Disease"
       }]
     });
 
-    view.ui.add(legend, "bottom-right");
+    view.ui.add(legend, "bottom-left");
+ 
     
+    //add legend here
+    
+    var legend2 = new Legend({
+      view: view,
+      layerInfos: [{
+        layer: featureLayer2,
+        title: "Health Care Facilities"
+      }]
+    });
+
+    view.ui.add(legend2, "bottom-right");
     
 });
