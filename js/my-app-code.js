@@ -2,10 +2,11 @@ require([
   "esri/Map",
   "esri/views/MapView",
   "esri/widgets/Legend",
+  "esri/widgets/LayerList",
   "esri/layers/FeatureLayer",
       
   "dojo/domReady!"
-], function(Map, MapView, Legend, FeatureLayer) {
+], function(Map, MapView, Legend,LayerList, FeatureLayer) {
 
   var map = new Map({
     basemap: "topo-vector"
@@ -64,7 +65,7 @@ require([
     view.ui.add(legend, "bottom-left");
  
     
-    //add legend here
+//add legend2 here
     
     var legend2 = new Legend({
       view: view,
@@ -75,5 +76,14 @@ require([
     });
 
     view.ui.add(legend2, "bottom-right");
+    
+//add layer list 
+    var layerList = new LayerList({
+        view: view
+    });
+// Adds widget below other elements in the top left corner of the view
+    view.ui.add(layerList, {
+        position: "top-left"
+    });
     
 });
