@@ -13,8 +13,8 @@
   z-index:450;
   top:5px;
   right:5px;
-  color: red;
-  background-color:midnightblue;
+  color: black;
+  background-color:steelblue;
   font-family:"Bookman Old Style";
   text-align: center;
   font-size:24px;
@@ -27,9 +27,24 @@
   position:absolute;
   z-index:450;
   bottom:5px;
-  right:5px;
-  color: red;
-  background-color:midnightblue;
+  right:35px;
+  color: black;
+  background-color:steelblue;
+  font-family:"Bookman Old Style";
+  text-align: center;
+  font-size:12px;
+  padding:6px;
+  border-radius:6px;
+}
+
+/*define floater*/
+#floater3{
+  position:absolute;
+  z-index:250;
+  top: 5px; 
+  left:45px;
+  color: black;
+  background-color:steelblue;
   font-family:"Bookman Old Style";
   text-align: center;
   font-size:12px;
