@@ -5,9 +5,11 @@ require([
   "esri/widgets/LayerList",
   "esri/layers/FeatureLayer",
   "esri/widgets/Home",
-      
+  "esri/widgets/Search",   
   "dojo/domReady!"
-], function(Map, MapView, Legend,LayerList, FeatureLayer, Home) {
+    
+    
+], function(Map, MapView, Legend,LayerList, FeatureLayer, Home, Search) {
 
   var map = new Map({
     basemap: "topo-vector"
@@ -50,7 +52,7 @@ require([
   container: "viewDiv",
   map: map,
   center: [-104.99,39.7392],
-  zoom: 10
+  zoom: 10,
     
   });
     
@@ -89,10 +91,20 @@ require([
         position: "bottom-left"
     });
     
-//addes home button
+//adds home button
      var homeBtn = new Home({
         view: view
       });
 // Add the home button to the top left corner of the view
       view.ui.add(homeBtn, "top-left");
+    
+// add search widget
+    var searchWidget = new Search({
+        view: view
+      });
+
+// Add the search widget to the top right corner of the view
+      view.ui.add(searchWidget, {
+        position: "top-left"
+      });
 });
