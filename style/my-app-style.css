@@ -12,7 +12,7 @@
   position:absolute;
   z-index:450;
   top:5px;
-  right:5px;
+  left:50px;
   color: black;
   background-color:steelblue;
   font-family:"Bookman Old Style";
@@ -42,11 +42,11 @@
   position:absolute;
   z-index:250;
   top: 5px; 
-  left:45px;
+  right:5px;
   color: black;
   background-color:steelblue;
   font-family:"Bookman Old Style";
-  text-align: center;
+  text-align: left;
   font-size:12px;
   padding:6px;
   border-radius:6px;
