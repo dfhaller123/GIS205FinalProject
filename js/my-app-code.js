@@ -4,9 +4,10 @@ require([
   "esri/widgets/Legend",
   "esri/widgets/LayerList",
   "esri/layers/FeatureLayer",
+  "esri/widgets/Home",
       
   "dojo/domReady!"
-], function(Map, MapView, Legend,LayerList, FeatureLayer) {
+], function(Map, MapView, Legend,LayerList, FeatureLayer, Home) {
 
   var map = new Map({
     basemap: "topo-vector"
@@ -50,6 +51,7 @@ require([
   map: map,
   center: [-104.99,39.7392],
   zoom: 10
+    
   });
     
 //add legend here
@@ -81,9 +83,16 @@ require([
     var layerList = new LayerList({
         view: view
     });
+
 // Adds widget below other elements in the top left corner of the view
     view.ui.add(layerList, {
-        position: "top-left"
+        position: "bottom-left"
     });
     
+//addes home button
+     var homeBtn = new Home({
+        view: view
+      });
+// Add the home button to the top left corner of the view
+      view.ui.add(homeBtn, "top-left");
 });
