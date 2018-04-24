@@ -39,7 +39,7 @@ require([
     
  //cdphe locations 
   var featureLayer2 = new FeatureLayer({
-    url: "https://services3.arcgis.com/66aUo8zsujfVXRIT/arcgis/rest/services/CDPHE_Health_Facilities/FeatureServer/", opacity: .5,
+    url: "https://services3.arcgis.com/66aUo8zsujfVXRIT/arcgis/rest/services/CDPHE_Health_Facilities/FeatureServer/",
     popupTemplate: template2
   });
 
