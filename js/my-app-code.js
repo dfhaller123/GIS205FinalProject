@@ -11,6 +11,7 @@ require([
     
 ], function(Map, MapView, Legend,LayerList, FeatureLayer, Home, Search) {
 
+// create the map    
   var map = new Map({
     basemap: "topo-vector"
   });
@@ -47,12 +48,15 @@ require([
 
   map.add(featureLayer2);
   
-  
+// create map view  
   var view = new MapView({
-  container: "viewDiv",
-  map: map,
-  center: [-104.99,39.7392],
-  zoom: 10,
+    container: "viewDiv",
+    map: map,
+    center: [-104.99,39.7392],
+    zoom: 10,
+    padding: {
+          right: 320 // Same value as the #sidebar width in CSS
+     }
     
   });
     
@@ -105,6 +109,6 @@ require([
 
 // Add the search widget to the top right corner of the view
       view.ui.add(searchWidget, {
-        position: "top-left"
+        position: "top-right"
       });
 });
