@@ -7,11 +7,11 @@ require([
   "esri/widgets/Home",
   "esri/widgets/Search",
     
-  "dojo/dom",    
+
   "dojo/domReady!"
     
     
-], function(Map, MapView, Legend, LayerList, FeatureLayer, Home, Search, dom) {
+], function(Map, MapView, Legend, LayerList, FeatureLayer, Home, Search,) {
 
 // create the map    
   var map = new Map({
@@ -28,7 +28,8 @@ require([
  //health facility popup template
   var template2 = {
     title: "Facility Name: {FAC_NAME}" +
-      "<li>{ADDRESS}, {CITY_STATE_ZIP}</>"
+      "<li>{ADDRESS}, {CITY_STATE_ZIP}</>" +
+      "<li>{FACTYPE}</li>"
       
     };  
     
@@ -62,12 +63,6 @@ require([
     
   });
     
-//move legend to sidebar
-    
-    //view.then(function() {
-          // get the first layer in the collection of operational layers in the WebMap
-          // when the resources in the MapView have loaded.
-    //var featureLayer = webmap.layers.getItemAt(0);
     
 //add legend here
     
@@ -77,7 +72,6 @@ require([
         layer: featureLayer,
         title: "% Chronic Disease"
       }]
-    //}, "text");
  });
 
     view.ui.add(legend, "bottom-left");
