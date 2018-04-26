@@ -13,7 +13,7 @@ require([
 
 // create the map    
   var map = new Map({
-    basemap: "Streets"
+    basemap: "streets"
   });
 
 //health total popup template
