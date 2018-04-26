@@ -7,15 +7,13 @@ require([
   "esri/widgets/Home",
   "esri/widgets/Search",
     
-
   "dojo/domReady!"
-    
     
 ], function(Map, MapView, Legend, LayerList, FeatureLayer, Home, Search,) {
 
 // create the map    
   var map = new Map({
-    basemap: "topo-vector"
+    basemap: "Streets"
   });
 
 //health total popup template
@@ -28,8 +26,8 @@ require([
  //health facility popup template
   var template2 = {
     title: "Facility Name: {FAC_NAME}" +
-      "<li>{ADDRESS}, {CITY_STATE_ZIP}</>" +
-      "<li>{FACTYPE}</li>"
+      "<li>{ADDRESS}, {CITY_STATE_ZIP}</li>" +
+      "<li>{FACTYPE}</li>",
       
     };  
     
